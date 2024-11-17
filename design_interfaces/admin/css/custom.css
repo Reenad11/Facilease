@@ -1,0 +1,48 @@
+/* Styling for the boxes */
+.box-link {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+}
+
+.box-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    color: #007bff; /* Bootstrap primary color or adjust as needed */
+}
+
+.box-content {
+    padding: 1rem;
+    border: 1px solid #ddd;
+    border-radius: .5rem;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+.box-content h6 {
+    margin: 0;
+    font-size: 1.25rem;
+}
+.bbox {
+    border: 2px solid #8eb5f1;
+}
+.bbox img {
+    height:250px;
+}
+.fc-direction-ltr .fc-daygrid-event.fc-event-end, .fc-direction-rtl .fc-daygrid-event.fc-event-start {
+    background: #ffa0a0;
+    color: white;
+    padding: 7px;
+}
+@media print {
+    header,footer,aside,.datatable-top, .pagetitle,.datatable-bottom,form,.btn-secondary {
+        display: none !important;
+    }
+}
+.addNew {
+    float: right;
+    position: absolute;
+    right: 17px;
+    top: 10px;
+}
