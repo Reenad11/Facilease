@@ -1,0 +1,400 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Facilease</title>
+    <meta content="" name="description">
+    <meta content="" name="keywords">
+    <link href="assets/img/favicon.png" rel="icon">
+    <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+    <link href="https://fonts.gstatic.com" rel="preconnect">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+    <link href="assets/vendor/quill/quill.snow.css" rel="stylesheet">
+    <link href="assets/vendor/quill/quill.bubble.css" rel="stylesheet">
+    <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+    <link href="assets/vendor/simple-datatables/style.css" rel="stylesheet">
+    <link href="assets/css/style.css" rel="stylesheet">
+    <link href="assets/css/custom.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
+
+
+    <style>
+        .invalid-feedback{
+            display:block !important;
+        }
+        .active2 {
+            background: #1f35ef !important;
+            color: white !important;
+        }
+        .active .bi  {
+            color:white;
+        }
+
+        .hItem {
+            padding: 6px 24px;
+            margin: 11px;
+            background: #8eb5f1;
+            color: white;
+            border-radius: 6px;
+            box-shadow: 0px 5px 4px 0px #756f6f;
+        }
+        #main {
+            margin-top: 96px;
+        }
+        .header {
+            height: 90px;
+        }
+        .logo img {
+            max-height: 100px;
+        }
+    </style>
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+
+
+    <script type="text/javascript" class="flasher-js">(function() {    var rootScript = 'https://cdn.jsdelivr.net/npm/@flasher/flasher@1.3.1/dist/flasher.min.js';    var FLASHER_FLASH_BAG_PLACE_HOLDER = {};    var options = mergeOptions([], FLASHER_FLASH_BAG_PLACE_HOLDER);    function mergeOptions(first, second) {        return {            context: merge(first.context || {}, second.context || {}),            envelopes: merge(first.envelopes || [], second.envelopes || []),            options: merge(first.options || {}, second.options || {}),            scripts: merge(first.scripts || [], second.scripts || []),            styles: merge(first.styles || [], second.styles || []),        };    }    function merge(first, second) {        if (Array.isArray(first) && Array.isArray(second)) {            return first.concat(second).filter(function(item, index, array) {                return array.indexOf(item) === index;            });        }        return Object.assign({}, first, second);    }    function renderOptions(options) {        if(!window.hasOwnProperty('flasher')) {            console.error('Flasher is not loaded');            return;        }        requestAnimationFrame(function () {            window.flasher.render(options);        });    }    function render(options) {        if ('loading' !== document.readyState) {            renderOptions(options);            return;        }        document.addEventListener('DOMContentLoaded', function() {            renderOptions(options);        });    }    if (1 === document.querySelectorAll('script.flasher-js').length) {        document.addEventListener('flasher:render', function (event) {            render(event.detail);        });    }    if (window.hasOwnProperty('flasher') || !rootScript || document.querySelector('script[src="' + rootScript + '"]')) {        render(options);    } else {        var tag = document.createElement('script');        tag.setAttribute('src', rootScript);        tag.setAttribute('type', 'text/javascript');        tag.onload = function () {            render(options);        };        document.head.appendChild(tag);    }})();</script>
+</head>
+<body class="toggle-sidebar">
+
+<header id="header" class="header fixed-top d-flex align-items-center">
+    <div class="d-flex align-items-center justify-content-between">
+        <a href="#" class="logo d-flex align-items-center">
+            <img style="    max-height: 57px;" src="logo.png" alt="">
+        </a>
+
+        <a href="faculty/dashboard" class="hItem">
+            <span class="d-none d-lg-block"><i class="bx bx-home"></i>Home</span>
+        </a>
+        <a href="faculty/dashboard" class="hItem">
+            <span class="d-none d-lg-block"><i class="bi bi-house-door"></i> Rooms</span>
+        </a>
+    </div>
+    <div class="search-bar">
+        <form class="search-form d-flex align-items-center" method="POST" action="#">
+            <input type="text" name="query" placeholder="Search" title="Enter search keyword">
+            <button type="submit" title="Search"><i class="bi bi-search"></i></button>
+        </form>
+    </div><!-- End Search Bar -->
+
+    <nav class="header-nav ms-auto">
+        <ul class="d-flex align-items-center">
+            <li class="nav-item d-block d-lg-none">
+                <a class="nav-link nav-icon search-bar-toggle " href="#">
+                    <i class="bi bi-search"></i>
+                </a>
+            </li><!-- End Search Icon-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            <li class="nav-item dropdown pe-3">
+                <a class="nav-link nav-profile d-flex align-items-center pe-0" href="#" data-bs-toggle="dropdown">
+                    <img src="assets/img/profile.png" alt="Profile" class="rounded-circle">
+                    <span class="d-none d-md-block dropdown-toggle ps-2">Welcome</span>
+                </a>
+
+
+                <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile">
+                    <li class="dropdown-header">
+                        <h6>Reem</h6>
+                        <span>faculty</span>
+                    </li>
+                    <li>
+                        <hr class="dropdown-divider">
+                    </li>
+                    <li>
+                        <a class="dropdown-item d-flex align-items-center" href="faculty/profile">
+                            <i class="bi bi-person"></i>
+                            <span>My Profile</span>
+                        </a>
+                    </li>
+                    <li>
+                        <hr class="dropdown-divider">
+                    </li>
+                    <li>
+                        <a onclick="confirmLogout(event,'logoutForm')" class="dropdown-item d-flex align-items-center"
+                           href="#">
+                            <i class="bi bi-box-arrow-right"></i>
+                            <span>Sign Out</span>
+                        </a>
+                        <form id="logoutForm" action="auth/logout" method="POST" style="display:inline;">
+                            <input type="hidden" name="_token" value="p8Fr0xsp4mgffrHBXnHPiMSc9pQtoHnuPzvsM5Mk">                            <input type="hidden" name="user_type" value="faculty">
+                        </form>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+</header><!-- End Header -->
+
+
+<main id="main" class="main">
+    <section class="section dashboard">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Rooms</h5>
+
+                        <!-- Filter Legend Box -->
+                        <div class="card mb-4">
+                            <div class="card-body">
+                                <h6 class="card-title">Filters</h6>
+                                <form method="GET" action="faculty/dashboard" class="row g-3">
+                                    <div class="col-md-3">
+                                        <label for="room_type" class="form-label">Room Type</label>
+                                        <select id="room_type" name="room_type" class="form-select select2">
+                                            <option value="">All</option>
+                                            <option value="2" >
+                                                conference
+                                            </option>
+                                            <option value="3" >
+                                                Classroom
+                                            </option>
+                                        </select>
+                                    </div>
+
+                                    <div class="col-md-2">
+                                        <label for="capacity" class="form-label">Capacity</label>
+                                        <input type="number" id="capacity" name="capacity" class="form-control" value="" min="1">
+                                    </div>
+
+                                    <div class="col-md-3">
+                                        <label for="date" class="form-label">Date</label>
+                                        <input  min="2024-11-17" type="date" id="date" name="date" class="form-control" value="">
+                                    </div>
+
+                                    <div class="col-md-3">
+                                        <label for="equipmentFilter" class="form-label">Equipment</label>
+                                        <select id="equipmentFilter" name="equipment[]" class="form-select select2" multiple>
+                                            <option value="Projector" >Projector</option>
+                                            <option value="Microphone" >Microphone</option>
+                                            <option value="VIP chairs" >VIP chairs</option>
+                                            <option value="Chairs with side tables" >Chairs with side tables</option>
+                                            <option value="Stage with curtain" >Stage with curtain</option>
+                                        </select>
+                                    </div>
+
+                                    <div class="col-1">
+                                        <button type="submit" class="btn btn-primary mt-4">Search</button>
+                                    </div>
+                                </form>
+
+                            </div>
+                        </div>
+
+                        <!-- Rooms List -->
+                        <div class="row">
+                            <div class="col-lg-4 col-md-6 mb-4">
+                                <div class="card bbox position-relative">
+                                    <!-- Badge for Availability Status -->
+                                    <span class="badge bg-success position-absolute top-0 start-0 m-2">Available</span>                                        <!-- Badge for Room Type -->
+                                    <img src="def.png"  class="card-img-top" alt="Room Image">
+                                    <div class="card-body">
+                                        <h5 class="card-title">917</h5>
+                                        <p class="card-text"><i class="bi bi-geo-alt"></i> Location: Ut perspiciatis inc</p>
+                                        <p class="card-text"><i class="bi bi-card-text"></i> Room Type: conference</p>
+                                        <p class="card-text"><i class="bi bi-people"></i> Capacity: 87</p>
+                                        <a href="faculty/rooms/5" class="btn btn-primary">Show Details</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6 mb-4">
+                                <div class="card bbox position-relative">
+                                    <!-- Badge for Availability Status -->
+                                    <span class="badge bg-success position-absolute top-0 start-0 m-2">Available</span>                                        <!-- Badge for Room Type -->
+                                    <img src="def.png"  class="card-img-top" alt="Room Image">
+                                    <div class="card-body">
+                                        <h5 class="card-title">055</h5>
+                                        <p class="card-text"><i class="bi bi-geo-alt"></i> Location: sdfgdfg</p>
+                                        <p class="card-text"><i class="bi bi-card-text"></i> Room Type: conference</p>
+                                        <p class="card-text"><i class="bi bi-people"></i> Capacity: 453</p>
+                                        <a href="faculty/rooms/4" class="btn btn-primary">Show Details</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6 mb-4">
+                                <div class="card bbox position-relative">
+                                    <!-- Badge for Availability Status -->
+                                    <span class="badge bg-success position-absolute top-0 start-0 m-2">Available</span>                                        <!-- Badge for Room Type -->
+                                    <img src="uploads/dummy-slug-2024-11-08-672dc99ee4713.jpg"  class="card-img-top" alt="Room Image">
+                                    <div class="card-body">
+                                        <h5 class="card-title">941</h5>
+                                        <p class="card-text"><i class="bi bi-geo-alt"></i> Location: Aliquam nihil facere</p>
+                                        <p class="card-text"><i class="bi bi-card-text"></i> Room Type: conference</p>
+                                        <p class="card-text"><i class="bi bi-people"></i> Capacity: 91</p>
+                                        <a href="faculty/rooms/3" class="btn btn-primary">Show Details</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6 mb-4">
+                                <div class="card bbox position-relative">
+                                    <!-- Badge for Availability Status -->
+                                    <span class="badge bg-success position-absolute top-0 start-0 m-2">Available</span>                                        <!-- Badge for Room Type -->
+                                    <img src="uploads/dummy-slug-2024-11-08-672dca4cc9daf.jpeg"  class="card-img-top" alt="Room Image">
+                                    <div class="card-body">
+                                        <h5 class="card-title">34444</h5>
+                                        <p class="card-text"><i class="bi bi-geo-alt"></i> Location: Sed qui voluptates a</p>
+                                        <p class="card-text"><i class="bi bi-card-text"></i> Room Type: Classroom</p>
+                                        <p class="card-text"><i class="bi bi-people"></i> Capacity: 44</p>
+                                        <a href="faculty/rooms/1" class="btn btn-primary">Show Details</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer id="footer" class="footer">
+    <div class="copyright">
+        &copy; Copyright <strong><span>Facilease</span></strong>. All Rights Reserved
+    </div>
+    <div class="credits">
+        Designed by <a href="#">Facilease</a>
+    </div>
+</footer><!-- End Footer -->
+
+<a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+<!-- Vendor JS Files -->
+<script src="assets/vendor/apexcharts/apexcharts.min.js"></script>
+<script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="assets/vendor/chart.js/chart.umd.js"></script>
+<script src="assets/vendor/echarts/echarts.min.js"></script>
+<script src="assets/vendor/quill/quill.js"></script>
+<script src="assets/vendor/simple-datatables/simple-datatables.js"></script>
+<script src="assets/vendor/tinymce/tinymce.min.js"></script>
+<script src="assets/vendor/php-email-form/validate.js"></script>
+<script src="assets/js/main.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+<script>
+    $(document).ready(function() {
+        $('.select2').select2({
+            width: '100%' // Makes Select2 fields occupy full width
+        });
+    });
+</script>
+
+<script>
+    tinymce.init({
+        selector: '#equipment',
+        height: 300,
+        menubar: false,
+        plugins: [
+            'advlist autolink lists link image charmap preview anchor',
+            'searchreplace visualblocks code fullscreen',
+            'insertdatetime media table paste code help wordcount'
+        ],
+        toolbar: 'undo redo | formatselect | bold italic backcolor | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | removeformat | help',
+        content_css: '//www.tiny.cloud/css/codepen.min.css'
+    });
+    tinymce.init({
+        selector: '#description',
+        height: 300,
+        menubar: false,
+        plugins: [
+            'advlist autolink lists link image charmap preview anchor',
+            'searchreplace visualblocks code fullscreen',
+            'insertdatetime media table paste code help wordcount'
+        ],
+        toolbar: 'undo redo | formatselect | bold italic backcolor | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | removeformat | help',
+        content_css: '//www.tiny.cloud/css/codepen.min.css'
+    });
+    function confirmAction(event, formId, action) {
+        event.preventDefault();
+        Swal.fire({
+            title: 'Are you sure want to '+action+'?',
+            text: "You won't be able to revert this!",
+            icon: 'question',
+            showCancelButton: true,
+            confirmButtonColor: '#3085d6',
+            cancelButtonColor: '#d33',
+            confirmButtonText: 'Yes',
+            cancelButtonText: 'No'
+        }).then((result) => {
+            if (result.isConfirmed) {
+                document.getElementById(formId).submit(); // Submit the form if confirmed
+            }
+        });
+    }
+    function confirmDelete(event, formId) {
+        event.preventDefault();
+        Swal.fire({
+            title: 'Are you sure?',
+            text: "You won't be able to revert this!",
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonColor: '#3085d6',
+            cancelButtonColor: '#d33',
+            confirmButtonText: 'Yes, delete it!',
+            cancelButtonText: 'Cancel'
+        }).then((result) => {
+            if (result.isConfirmed) {
+                document.getElementById(formId).submit(); // Submit the form if confirmed
+            }
+        });
+    }
+    function confirmLogout(event, formId) {
+        event.preventDefault();
+        Swal.fire({
+            title: 'Are you sure want to logout?',
+            icon: 'info',
+            showCancelButton: true,
+            confirmButtonColor: '#3085d6',
+            cancelButtonColor: '#d33',
+            confirmButtonText: 'Yes',
+            cancelButtonText: 'No'
+        }).then((result) => {
+            if (result.isConfirmed) {
+                document.getElementById(formId).submit(); // Submit the form if confirmed
+            }
+        });
+    }
+
+</script>
+</body>
+</html>

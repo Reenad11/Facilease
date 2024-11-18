@@ -1,0 +1,441 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Facilease</title>
+    <meta content="" name="description">
+    <meta content="" name="keywords">
+    <link href="assets/img/favicon.png" rel="icon">
+    <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+    <link href="https://fonts.gstatic.com" rel="preconnect">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+    <link href="assets/vendor/quill/quill.snow.css" rel="stylesheet">
+    <link href="assets/vendor/quill/quill.bubble.css" rel="stylesheet">
+    <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+    <link href="assets/vendor/simple-datatables/style.css" rel="stylesheet">
+    <link href="assets/css/style.css" rel="stylesheet">
+    <link href="assets/css/custom.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
+
+
+    <style>
+        .invalid-feedback{
+            display:block !important;
+        }
+        .active2 {
+            background: #1f35ef !important;
+            color: white !important;
+        }
+        .active .bi  {
+            color:white;
+        }
+
+        .hItem {
+            padding: 6px 24px;
+            margin: 11px;
+            background: #8eb5f1;
+            color: white;
+            border-radius: 6px;
+            box-shadow: 0px 5px 4px 0px #756f6f;
+        }
+        #main {
+            margin-top: 96px;
+        }
+        .header {
+            height: 90px;
+        }
+        .logo img {
+            max-height: 100px;
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fullcalendar@5.11.3/main.min.css">
+    <!-- Swiper CSS and JS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
+
+    <!-- Fancybox CSS and JS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox/dist/jquery.fancybox.min.css" />
+
+    <script type="text/javascript" class="flasher-js">(function() {    var rootScript = 'https://cdn.jsdelivr.net/npm/@flasher/flasher@1.3.1/dist/flasher.min.js';    var FLASHER_FLASH_BAG_PLACE_HOLDER = {};    var options = mergeOptions([], FLASHER_FLASH_BAG_PLACE_HOLDER);    function mergeOptions(first, second) {        return {            context: merge(first.context || {}, second.context || {}),            envelopes: merge(first.envelopes || [], second.envelopes || []),            options: merge(first.options || {}, second.options || {}),            scripts: merge(first.scripts || [], second.scripts || []),            styles: merge(first.styles || [], second.styles || []),        };    }    function merge(first, second) {        if (Array.isArray(first) && Array.isArray(second)) {            return first.concat(second).filter(function(item, index, array) {                return array.indexOf(item) === index;            });        }        return Object.assign({}, first, second);    }    function renderOptions(options) {        if(!window.hasOwnProperty('flasher')) {            console.error('Flasher is not loaded');            return;        }        requestAnimationFrame(function () {            window.flasher.render(options);        });    }    function render(options) {        if ('loading' !== document.readyState) {            renderOptions(options);            return;        }        document.addEventListener('DOMContentLoaded', function() {            renderOptions(options);        });    }    if (1 === document.querySelectorAll('script.flasher-js').length) {        document.addEventListener('flasher:render', function (event) {            render(event.detail);        });    }    if (window.hasOwnProperty('flasher') || !rootScript || document.querySelector('script[src="' + rootScript + '"]')) {        render(options);    } else {        var tag = document.createElement('script');        tag.setAttribute('src', rootScript);        tag.setAttribute('type', 'text/javascript');        tag.onload = function () {            render(options);        };        document.head.appendChild(tag);    }})();</script>
+</head>
+<body class="toggle-sidebar">
+
+<header id="header" class="header fixed-top d-flex align-items-center">
+    <div class="d-flex align-items-center justify-content-between">
+        <a href="#" class="logo d-flex align-items-center">
+            <img style="    max-height: 57px;" src="logo.png" alt="">
+        </a>
+
+        <a href="faculty/dashboard" class="hItem">
+            <span class="d-none d-lg-block"><i class="bx bx-home"></i>Home</span>
+        </a>
+        <a href="faculty/dashboard" class="hItem">
+            <span class="d-none d-lg-block"><i class="bi bi-house-door"></i> Rooms</span>
+        </a>
+    </div>
+    <div class="search-bar">
+        <form class="search-form d-flex align-items-center" method="POST" action="#">
+            <input type="text" name="query" placeholder="Search" title="Enter search keyword">
+            <button type="submit" title="Search"><i class="bi bi-search"></i></button>
+        </form>
+    </div><!-- End Search Bar -->
+
+    <nav class="header-nav ms-auto">
+        <ul class="d-flex align-items-center">
+            <li class="nav-item d-block d-lg-none">
+                <a class="nav-link nav-icon search-bar-toggle " href="#">
+                    <i class="bi bi-search"></i>
+                </a>
+            </li><!-- End Search Icon-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            <li class="nav-item dropdown pe-3">
+                <a class="nav-link nav-profile d-flex align-items-center pe-0" href="#" data-bs-toggle="dropdown">
+                    <img src="assets/img/profile.png" alt="Profile" class="rounded-circle">
+                    <span class="d-none d-md-block dropdown-toggle ps-2">Welcome</span>
+                </a>
+
+
+                <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile">
+                    <li class="dropdown-header">
+                        <h6>Reem</h6>
+                        <span>faculty</span>
+                    </li>
+                    <li>
+                        <hr class="dropdown-divider">
+                    </li>
+                    <li>
+                        <a class="dropdown-item d-flex align-items-center" href="faculty/profile">
+                            <i class="bi bi-person"></i>
+                            <span>My Profile</span>
+                        </a>
+                    </li>
+                    <li>
+                        <hr class="dropdown-divider">
+                    </li>
+                    <li>
+                        <a onclick="confirmLogout(event,'logoutForm')" class="dropdown-item d-flex align-items-center"
+                           href="#">
+                            <i class="bi bi-box-arrow-right"></i>
+                            <span>Sign Out</span>
+                        </a>
+                        <form id="logoutForm" action="auth/logout" method="POST" style="display:inline;">
+                            <input type="hidden" name="_token" value="p8Fr0xsp4mgffrHBXnHPiMSc9pQtoHnuPzvsM5Mk">                            <input type="hidden" name="user_type" value="faculty">
+                        </form>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+</header><!-- End Header -->
+
+
+<main id="main" class="main">
+    <section class="section room-details">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Room Details</h5>
+
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <!-- Main Image Slider -->
+                                    <div style="overflow:hidden;" class="swiper-container main-slider">
+                                        <div class="swiper-wrapper">
+                                            <div class="swiper-slide">
+                                                <a href="uploads/dummy-slug-2024-11-08-672dc99ee4713.jpg" data-fancybox="gallery" data-caption="Room Image">
+                                                    <img src="uploads/dummy-slug-2024-11-08-672dc99ee4713.jpg" class="img-fluid" alt="Room Image" />
+                                                </a>
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <a href="uploads/dummy-slug-2024-11-08-672dc99ee678c.jpg" data-fancybox="gallery" data-caption="Room Image">
+                                                    <img src="uploads/dummy-slug-2024-11-08-672dc99ee678c.jpg" class="img-fluid" alt="Room Image" />
+                                                </a>
+                                            </div>
+                                        </div>
+
+
+
+                                    </div>
+
+                                    <!-- Thumbnail Slider -->
+                                    <div class="swiper-container thumb-slider mt-3">
+                                        <div class="swiper-wrapper">
+                                            <div class="swiper-slide">
+                                                <img src="uploads/dummy-slug-2024-11-08-672dc99ee4713.jpg" class="img-fluid img-thumbnail" alt="Thumbnail Image" style="cursor: pointer;" />
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <img src="uploads/dummy-slug-2024-11-08-672dc99ee678c.jpg" class="img-fluid img-thumbnail" alt="Thumbnail Image" style="cursor: pointer;" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <h6>Room Number: 941</h6>
+                                    <p><i class="bi bi-geo-alt"></i> Location: Aliquam nihil facere</p>
+                                    <p><i class="bi bi-card-text"></i> Room Type: conference</p>
+                                    <p><i class="bi bi-people"></i> Capacity: 91</p>
+
+
+                                </div>
+                            </div>
+
+                            <!-- Booking Calendar -->
+                            <div class="mt-4">
+                                <h5 class="card-title">Available Dates</h5>
+                                <div id="calendar"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal for Booking -->
+    <div class="modal fade" id="bookingModal" tabindex="-1" aria-labelledby="bookingModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="bookingModalLabel">Book This Room</h5>
+
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="bookingForm" method="POST" action="faculty/rooms/3/reservation">
+                        <input type="hidden" name="_token" value="p8Fr0xsp4mgffrHBXnHPiMSc9pQtoHnuPzvsM5Mk">                        <input type="hidden" value="" name="selected_date" id="selected_date">
+                        <div class="mb-3">
+                            <label for="start_time" class="form-label">Start Time</label>
+                            <input type="time" name="start_time" id="start_time" value="" class="form-control " required>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="end_time" class="form-label">End Time</label>
+                            <input type="time" name="end_time" id="end_time" value="" class="form-control " required>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary">Submit Booking</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+
+<footer id="footer" class="footer">
+    <div class="copyright">
+        &copy; Copyright <strong><span>Facilease</span></strong>. All Rights Reserved
+    </div>
+    <div class="credits">
+        Designed by <a href="#">Facilease</a>
+    </div>
+</footer><!-- End Footer -->
+
+<a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+<!-- Vendor JS Files -->
+<script src="assets/vendor/apexcharts/apexcharts.min.js"></script>
+<script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="assets/vendor/chart.js/chart.umd.js"></script>
+<script src="assets/vendor/echarts/echarts.min.js"></script>
+<script src="assets/vendor/quill/quill.js"></script>
+<script src="assets/vendor/simple-datatables/simple-datatables.js"></script>
+<script src="assets/vendor/tinymce/tinymce.min.js"></script>
+<script src="assets/vendor/php-email-form/validate.js"></script>
+<script src="assets/js/main.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/fullcalendar@5.11.3/main.min.js"></script>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        var calendarEl = document.getElementById('calendar');
+
+        var calendar = new FullCalendar.Calendar(calendarEl, {
+            initialView: 'dayGridMonth',
+            validRange: {
+                start: new Date().toISOString().split('T')[0] // Disable past dates
+            },
+            headerToolbar: {
+                left: 'prev,next today',
+                center: 'title',
+                right: 'dayGridMonth,timeGridWeek,timeGridDay'
+            },
+            events: [{"title":"Reservation","start":"2024-11-09T16:05:00","end":"2024-11-09T19:10:00","color":"red"},{"title":"Reservation","start":"2024-11-09T00:35:00","end":"2024-11-09T14:53:00","color":"red"},{"title":"Reservation","start":"2024-11-12T19:55:00","end":"2024-11-12T20:55:00","color":"red"}],
+            dateClick: function(info) {
+                document.getElementById('selected_date').value = info.dateStr;
+                var modal = new bootstrap.Modal(document.getElementById('bookingModal'));
+                modal.show();
+            }
+        });
+
+        calendar.render();
+    });
+</script>
+
+
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox/dist/jquery.fancybox.min.js"></script>
+
+<script>
+    // Initialize the thumbnail Swiper slider first
+    const thumbSlider = new Swiper('.thumb-slider', {
+        spaceBetween: 10,
+        slidesPerView: 4,
+        freeMode: true,
+        watchSlidesVisibility: true,
+        watchSlidesProgress: true,
+        on: {
+            click: function (swiper) {
+                mainSlider.slideTo(swiper.clickedIndex);
+            }
+        }
+    });
+
+    // Initialize the main Swiper slider and link it to the thumbSlider
+    const mainSlider = new Swiper('.main-slider', {
+        spaceBetween: 10,
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+        thumbs: {
+            swiper: thumbSlider // Link the thumbnail slider here
+        }
+    });
+
+    // Initialize Fancybox for zoom functionality
+    $('[data-fancybox="gallery"]').fancybox({
+        buttons: [
+            "zoom",
+            "slideShow",
+            "thumbs",
+            "close"
+        ],
+        loop: true,
+        protect: true,
+    });
+</script>
+<script>
+    tinymce.init({
+        selector: '#equipment',
+        height: 300,
+        menubar: false,
+        plugins: [
+            'advlist autolink lists link image charmap preview anchor',
+            'searchreplace visualblocks code fullscreen',
+            'insertdatetime media table paste code help wordcount'
+        ],
+        toolbar: 'undo redo | formatselect | bold italic backcolor | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | removeformat | help',
+        content_css: '//www.tiny.cloud/css/codepen.min.css'
+    });
+    tinymce.init({
+        selector: '#description',
+        height: 300,
+        menubar: false,
+        plugins: [
+            'advlist autolink lists link image charmap preview anchor',
+            'searchreplace visualblocks code fullscreen',
+            'insertdatetime media table paste code help wordcount'
+        ],
+        toolbar: 'undo redo | formatselect | bold italic backcolor | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | removeformat | help',
+        content_css: '//www.tiny.cloud/css/codepen.min.css'
+    });
+    function confirmAction(event, formId, action) {
+        event.preventDefault();
+        Swal.fire({
+            title: 'Are you sure want to '+action+'?',
+            text: "You won't be able to revert this!",
+            icon: 'question',
+            showCancelButton: true,
+            confirmButtonColor: '#3085d6',
+            cancelButtonColor: '#d33',
+            confirmButtonText: 'Yes',
+            cancelButtonText: 'No'
+        }).then((result) => {
+            if (result.isConfirmed) {
+                document.getElementById(formId).submit(); // Submit the form if confirmed
+            }
+        });
+    }
+    function confirmDelete(event, formId) {
+        event.preventDefault();
+        Swal.fire({
+            title: 'Are you sure?',
+            text: "You won't be able to revert this!",
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonColor: '#3085d6',
+            cancelButtonColor: '#d33',
+            confirmButtonText: 'Yes, delete it!',
+            cancelButtonText: 'Cancel'
+        }).then((result) => {
+            if (result.isConfirmed) {
+                document.getElementById(formId).submit(); // Submit the form if confirmed
+            }
+        });
+    }
+    function confirmLogout(event, formId) {
+        event.preventDefault();
+        Swal.fire({
+            title: 'Are you sure want to logout?',
+            icon: 'info',
+            showCancelButton: true,
+            confirmButtonColor: '#3085d6',
+            cancelButtonColor: '#d33',
+            confirmButtonText: 'Yes',
+            cancelButtonText: 'No'
+        }).then((result) => {
+            if (result.isConfirmed) {
+                document.getElementById(formId).submit(); // Submit the form if confirmed
+            }
+        });
+    }
+
+</script>
+</body>
+</html>
